@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { Workspace } from "@/components/workspace";
+import { requireProfile } from "@/lib/session";
 export default async function Page({
   params,
 }: {
@@ -18,8 +19,10 @@ export default async function Page({
       "contas",
       "categorias",
       "configuracoes",
+      "perfil",
     ].includes(path)
   )
     notFound();
-  return <Workspace page={path} />;
+  const profile = await requireProfile();
+  return <Workspace page={path} profile={profile} />;
 }

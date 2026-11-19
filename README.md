@@ -11,14 +11,15 @@ pnpm install
 pnpm dev
 ```
 
-Acesse http://127.0.0.1:3000. A primeira visita abre um workspace vazio. O servidor escuta apenas no computador local.
+Copie `.env.example` para `.env.local`. Em **Connect** no Supabase, obtenha a URL do projeto e a chave publicável. Configure `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` e reinicie o servidor. Acesse http://127.0.0.1:3000 e entre com uma conta cadastrada no Supabase Auth.
 
 ```sh
 pnpm typecheck
 pnpm test
 pnpm build
-pnpm exec playwright test
 ```
+
+Para rodar `pnpm exec playwright test`, mantenha o app em execução com um projeto Supabase de testes. Defina `MANEY_E2E_EMAIL` e `MANEY_E2E_PASSWORD` no ambiente do terminal com as credenciais de uma conta de teste. `MANEY_E2E_BASE_URL` permite usar outra URL do app.
 
 ## Funcionalidades
 
@@ -38,22 +39,17 @@ pnpm exec playwright test
 
 ## Persistência e limites desta versão
 
-Os dados são armazenados em **IndexedDB neste navegador e origem**. Não é necessário configurar serviços externos para testar. Limpar os dados do site remove o armazenamento; exporte um backup em Configurações. Não há autenticação nem sincronização entre dispositivos nesta versão local. Anexos ficam dentro do backup, sujeitos à quota do navegador. O CSV é uma extração para análise, não um backup: use JSON para preservar baixas individuais e todos os metadados.
+O Supabase autentica a conta. Os lançamentos ficam em **IndexedDB neste navegador e origem**. Para levar lançamentos entre endereços ou dispositivos, exporte e restaure um backup JSON em Configurações. O JSON inclui anexos, baixas e metadados. O CSV é uma extração para análise.
 
 Valores são inteiros em centavos. Competência alimenta a DRE; pagamentos alimentam o caixa. Aportes, empréstimos e distribuição de lucros podem ser classificados em categorias fora da DRE. Não há cálculo tributário automático, emissão fiscal, cobrança bancária nem rateio de despesas por cliente. A DRE é gerencial e depende da classificação correta dos lançamentos.
 
 ## Supabase e Vercel
 
-A aplicação está pronta para build na Vercel. O modo atual permanece local, inclusive se publicado: **publicação não ativa nuvem nem autenticação**.
+1. No Supabase, cadastre a conta em **Authentication → Users** e desative o cadastro público em um projeto de uso individual.
+2. Na Vercel, configure `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` no ambiente Production. Faça um novo deploy para aplicar as variáveis.
+3. Abra a URL publicada em uma janela anônima e confirme que o painel exige login.
 
-O adaptador em `src/lib/supabase.ts` e a migração `supabase/migrations/202611120001_workspace.sql` preparam a próxima etapa. A tabela armazena um documento por usuário, com RLS e controle otimista de revisão. Para uma aplicação individual com baixo volume, isso mantém a migração do domínio simples. Autenticação, recuperação de acesso, sincronização e backup externo ainda precisam ser conectados antes de usar dados reais em nuvem.
-
-1. Crie seu projeto Supabase e aplique a migração.
-2. Copie `.env.example` para `.env.local` e configure URL e chave publicável. Nunca use uma chave de serviço no cliente.
-3. Na próxima etapa, conecte autenticação e o Provider ao adaptador; mantenha o modo local isolado e valide as políticas RLS com duas contas.
-4. Configure as mesmas variáveis na Vercel e os endereços de redirecionamento de autenticação.
-
-Nenhuma conexão externa ou publicação é feita automaticamente.
+A migração `supabase/migrations/202611120001_workspace.sql` prepara a futura sincronização dos lançamentos. O login usa somente o Supabase Auth.
 
 Brand update: use the supplied `maney logo novo.png` and `favicon.png`. The interface uses white and neutral light-gray surfaces; lime is the only accent and is reserved for relevant actions and selection. Financial amounts and ordinary states stay neutral and retain explicit labels/icons. Existing browser database and sidebar preference identifiers are preserved for compatibility.
 

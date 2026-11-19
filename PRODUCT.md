@@ -28,7 +28,7 @@ Use Vercel Geist design system: https://vercel.com/geist/introduction. The confi
 
 ## Evidence on Hand
 
-Use an empty workspace initially. A real Bling export for paid receivables is available as the first import layout. Supabase project credentials are not supplied. Local mode is not authentication or a production backup service.
+Use an empty workspace initially. A real Bling export for paid receivables is available as the first import layout. Supabase Auth verifies the session on the server. Financial records live in IndexedDB per browser and origin.
 
 ## Product Principles
 

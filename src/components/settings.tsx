@@ -209,12 +209,8 @@ export function Settings() {
             </p>
             <div className="aside-divider" />
             <ShieldCheck size={19} />
-            <h3>Preparado para o próximo passo</h3>
-            <p>
-              A estrutura inclui a migração e o adaptador para Supabase.
-              Autenticação e sincronização serão ativadas na etapa de conexão ao
-              ambiente online.
-            </p>
+            <h3>Acesso à conta</h3>
+            <p>Seu e-mail e sua senha são validados pelo Supabase.</p>
           </aside>
         </div>
       ) : (

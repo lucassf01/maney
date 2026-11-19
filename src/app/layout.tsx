@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-import { Provider } from "@/components/provider";
 import "./globals.css";
 import "@/components/reactframe/sidebar.css";
 export const metadata: Metadata = {
@@ -17,9 +16,7 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${GeistSans.variable} ${GeistMono.variable}`}
     >
-      <body>
-        <Provider>{children}</Provider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

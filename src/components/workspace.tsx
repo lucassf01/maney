@@ -31,6 +31,8 @@ import { Settings } from "./settings";
 import { EntryDrawer } from "./entry-drawer";
 import { Empty, Sheet, StatusBadge } from "./ui";
 import { Brand } from "./brand";
+import { profileInitials, type Profile as AccountProfile } from "@/lib/auth";
+import { Profile } from "./profile";
 
 const primary = [
   { path: "", name: "Visão geral", icon: House },
@@ -44,7 +46,13 @@ const secondary = [
   { path: "contas", name: "Contas financeiras", icon: Landmark },
   { path: "categorias", name: "Categorias financeiras", icon: Tags },
 ];
-export function Workspace({ page }: { page: string }) {
+export function Workspace({
+  page,
+  profile,
+}: {
+  page: string;
+  profile: AccountProfile;
+}) {
   const router = useRouter();
   const { data } = useFinance(),
     [mobile, setMobile] = useState(false),
@@ -59,6 +67,7 @@ export function Workspace({ page }: { page: string }) {
       ...primary,
       ...secondary,
       { path: "configuracoes", name: "Configurações" },
+      { path: "perfil", name: "Perfil" },
     ].find((n) => n.path === page)?.name;
   const mobileRef = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -154,11 +163,11 @@ export function Workspace({ page }: { page: string }) {
         </div>
       }
       user={{
-        name: "Lucas",
-        subtitle: "Minha empresa",
-        initials: "L",
+        name: profile.name,
+        subtitle: profile.email,
+        initials: profileInitials(profile.name),
         onClick: () => {
-          router.push("/configuracoes");
+          router.push("/perfil");
           setMobile(false);
         },
       }}
@@ -235,11 +244,19 @@ export function Workspace({ page }: { page: string }) {
               <Bell size={18} />
               {due.length > 0 && <i />}
             </button>
-            <span className="profile-avatar top-avatar">L</span>
+            <button
+              className="profile-avatar top-avatar"
+              aria-label={`Abrir perfil de ${profile.name}`}
+              onClick={() => router.push("/perfil")}
+            >
+              {profileInitials(profile.name)}
+            </button>
           </div>
         </header>
         <main id="main" className="main-content">
-          {page === "" ? (
+          {page === "perfil" ? (
+            <Profile profile={profile} />
+          ) : page === "" ? (
             <Overview />
           ) : page === "pagar" ? (
             <Ledger key="expense" direction="expense" />
