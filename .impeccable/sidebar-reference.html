@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en" class="dark" data-theme="dark" style="color-scheme: dark; background: #000">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="canonical" href="https://devlibraries.com/libraries/reactframe/sidebar" /><meta property="og:url" content="https://devlibraries.com/libraries/reactframe/sidebar" /><script>window.__ddlSsr={"path":"/libraries/reactframe/sidebar","title":"Sidebar · ReactFrame | Dev Design Library","desc":"A collapsible app sidebar with grouped nav sections, a sliding active-item indicator, badges, an icon-only rail mode with hover tooltips, a user footer and full keyboard navigation.","robots":"index, follow, max-image-preview:large","canon":"https://devlibraries.com/libraries/reactframe/sidebar"}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar · ReactFrame | Dev Design Library</title>
+    <meta
+      name="description"
+      content="A collapsible app sidebar with grouped nav sections, a sliding active-item indicator, badges, an icon-only rail mode with hover tooltips, a user footer and full keyboard navigation."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#000000" />
+    <!-- SEO: o shell vale para todas as rotas, então o canonical, o título e o robots de cada rota saem do script abaixo (sem canonical fixo, que diria ao Google que toda página é a home). -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Dev Design Library" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      property="og:title"
+      content="Sidebar · ReactFrame | Dev Design Library"
+    />
+    <meta
+      property="og:description"
+      content="A collapsible app sidebar with grouped nav sections, a sliding active-item indicator, badges, an icon-only rail mode with hover tooltips, a user footer and full keyboard navigation."
+    />
+    <meta property="og:image" content="https://devlibraries.com/og/c/reactframe/sidebar.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Dev Design Library" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Sidebar · ReactFrame | Dev Design Library"
+    />
+    <meta
+      name="twitter:description"
+      content="A collapsible app sidebar with grouped nav sections, a sliding active-item indicator, badges, an icon-only rail mode with hover tooltips, a user footer and full keyboard navigation."
+    />
+    <meta name="twitter:image" content="https://devlibraries.com/og/c/reactframe/sidebar.png" />
+    <link rel="alternate" type="text/plain" title="llms.txt" href="data:text/plain;base64,IyBEZXYgRGVzaWduIExpYnJhcnkKCj4gRGV2IERlc2lnbiBMaWJyYXJ5IChodHRwczovL2RldmxpYnJhcmllcy5jb20pIGlzIGEgZnJlZSwgc2VhcmNoYWJsZSBjYXRhbG9nIG9mIFVJIGNvbXBvbmVudHMgY29sbGVjdGVkIGZyb20gb3Blbi1zb3VyY2UgY29tcG9uZW50IGxpYnJhcmllcy4gSXQgaW5kZXhlcyAxMyw1MjQgY29tcG9uZW50cyBmcm9tIDExMCBsaWJyYXJpZXMgKFJlYWN0IGFuZCBvdGhlciBmcmFtZXdvcmtzKSwgd2l0aCBzb3VyY2UgY29kZSwgbGl2ZSBwcmV2aWV3cyB3aGVyZSBhdmFpbGFibGUsIHRoZSBsaWJyYXJ5J3MgbGljZW5zZSBhbmQgaW5zdGFsbCBjb21tYW5kcy4gSXQgYWxzbyBjdXJhdGVzIGRlc2lnbiBhbmQgZGV2ZWxvcG1lbnQgc2l0ZXM6IHRvb2xzICgyLDkyMCksIHJlZmVyZW5jZXMgKDYsMTk5KSBhbmQgcmVzb3VyY2VzICgxLDEwMSksIHBsdXMgNjAgYWdlbnQgc2tpbGxzIGZvciBBSSBjb2RpbmcgYXNzaXN0YW50cy4KClRoZSBzaXRlIGlzIGEgc2luZ2xlLXBhZ2UgYXBwIGluIEVuZ2xpc2guIENvbXBvbmVudHMga2VlcCB0aGUgbGljZW5zZSBvZiB0aGUgbGlicmFyeSB0aGV5IGNvbWUgZnJvbTsgY2hlY2sgdGhlIGxpYnJhcnkncyBsaWNlbnNlIGJlZm9yZSByZXVzZS4KCiMjIE1haW4gcGFnZXMKCi0gW0hvbWVdKGh0dHBzOi8vZGV2bGlicmFyaWVzLmNvbS8pOiB0b3AgbGlicmFyaWVzLCBjb21wb25lbnRzLCB0b29scywgcmVmZXJlbmNlcyBhbmQgcmVzb3VyY2VzCi0gW0xpYnJhcmllc10oaHR0cHM6Ly9kZXZsaWJyYXJpZXMuY29tL2xpYnJhcmllcyk6IGJyb3dzZSBhbmQgc2VhcmNoIGV2ZXJ5IGxpYnJhcnkgYW5kIGNvbXBvbmVudAotIFtFeHBsb3JlXShodHRwczovL2RldmxpYnJhcmllcy5jb20vZXhwbG9yZSk6IGNvbXBvbmVudCBwYWNrcyBwdWJsaXNoZWQgYnkgdGhlIGNvbW11bml0eQotIFtUb29sc10oaHR0cHM6Ly9kZXZsaWJyYXJpZXMuY29tL3Rvb2xzKTogZGVzaWduIGFuZCBkZXZlbG9wbWVudCB0b29scwotIFtSZWZlcmVuY2VzXShodHRwczovL2RldmxpYnJhcmllcy5jb20vcmVmZXJlbmNlcyk6IHdlYnNpdGVzIGN1cmF0ZWQgYXMgZGVzaWduIHJlZmVyZW5jZXMKLSBbUmVzb3VyY2VzXShodHRwczovL2RldmxpYnJhcmllcy5jb20vcmVzb3VyY2VzKTogcmVzb3VyY2VzIGZvciBkZXNpZ25lcnMgYW5kIGRldmVsb3BlcnMKLSBbU2tpbGxzXShodHRwczovL2RldmxpYnJhcmllcy5jb20vc2tpbGxzKTogYWdlbnQgc2tpbGxzIGZvciBBSSBjb2RpbmcgYXNzaXN0YW50cwoKIyMgVVJMIHBhdHRlcm5zCgotIExpYnJhcnkgcGFnZTogYGh0dHBzOi8vZGV2bGlicmFyaWVzLmNvbS9saWJyYXJpZXMvPGxpYnJhcnktaWQ+YCAoZm9yIGV4YW1wbGUgaHR0cHM6Ly9kZXZsaWJyYXJpZXMuY29tL2xpYnJhcmllcy9jdWx0LXVpKQotIENvbXBvbmVudCBwYWdlOiBgaHR0cHM6Ly9kZXZsaWJyYXJpZXMuY29tL2xpYnJhcmllcy88bGlicmFyeS1pZD4vPGNvbXBvbmVudC1uYW1lPmAgKGZvciBleGFtcGxlIGh0dHBzOi8vZGV2bGlicmFyaWVzLmNvbS9saWJyYXJpZXMvY3VsdC11aS9hZ2VudC1zdWdnZXN0LWNhcmQtc3RhY2spCi0gVG9vbHMsIHJlZmVyZW5jZXMsIHJlc291cmNlcyBhbmQgc2tpbGxzIG9wZW4gYXMgY2FyZHMgYW5kIGRpYWxvZ3MgaW5zaWRlIHRoZWlyIHNlY3Rpb24gcGFnZXM7IHRoZXkgZG8gbm90IGhhdmUgcGFnZXMgb2YgdGhlaXIgb3duLgotIENvbnRhY3QsIHByaXZhY3kgYW5kIHRoZSBNQ1AgaW5zdGFsbCBndWlkZSBhcmUgZGlhbG9ncyBpbnNpZGUgdGhlIGFwcCwgbm90IHNlcGFyYXRlIHBhZ2VzLgoKIyMgU3RydWN0dXJlZCBkYXRhCgpUaGUgY2F0YWxvZyB0aGUgc2l0ZSBydW5zIG9uIGlzIHB1YmxpYyBKU09OOgoKLSBbbGlicmFyaWVzLmpzb25dKGh0dHBzOi8vZGV2bGlicmFyaWVzLmNvbS9kYXRhL2NhdGFsb2cvbGlicmFyaWVzLmpzb24pOiBldmVyeSBsaWJyYXJ5IHdpdGggaWQsIG5hbWUsIHJlcG9zaXRvcnksIHdlYnNpdGUsIGxpY2Vuc2UsIGZyYW1ld29yayBhbmQgY29tcG9uZW50IGNvdW50Ci0gW2NvbXBvbmVudHMuanNvbl0oaHR0cHM6Ly9kZXZsaWJyYXJpZXMuY29tL2RhdGEvY2F0YWxvZy9jb21wb25lbnRzLmpzb24pOiBldmVyeSBjb21wb25lbnQgd2l0aCBpZCAoYDxsaWJyYXJ5LWlkPi88Y29tcG9uZW50LW5hbWU+YCksIGxpYnJhcnksIHRpdGxlLCB0eXBlLCBmaWxlcywgZGVzY3JpcHRpb24gYW5kIGRlcGVuZGVuY2llcyAoYWJvdXQgMTAgTUIpCi0gW2Rlc2NyaXB0aW9ucy5qc29uXShodHRwczovL2RldmxpYnJhcmllcy5jb20vZGF0YS9jYXRhbG9nL2Rlc2NyaXB0aW9ucy5qc29uKTogd3JpdHRlbiBkZXNjcmlwdGlvbnMga2V5ZWQgYnkgY29tcG9uZW50IGlkCi0gW3NpdGVzLmpzb25dKGh0dHBzOi8vZGV2bGlicmFyaWVzLmNvbS9kYXRhL2NhdGFsb2cvc2l0ZXMuanNvbik6IHRvb2xzLCByZWZlcmVuY2VzIGFuZCByZXNvdXJjZXMgYXMgcm93cyBvZiBgW3VybCwgbmFtZSwgZGVzY3JpcHRpb24sIGltYWdlLCBjYXRlZ29yaWVzLCBzZWN0aW9uLCBleHRyYSB0YWdzXWAKLSBbaW5zdGFsbC5qc29uXShodHRwczovL2RldmxpYnJhcmllcy5jb20vZGF0YS9pbnN0YWxsLmpzb24pOiBpbnN0YWxsIGNvbW1hbmQgcGVyIGxpYnJhcnkgKGB7bmFtZX1gIGlzIHRoZSBjb21wb25lbnQgbmFtZSkKCiMjIE1DUCBzZXJ2ZXIKCkNvZGluZyBhc3Npc3RhbnRzIGNhbiBzZWFyY2ggdGhlIGNhdGFsb2csIHJlYWQgYSBjb21wb25lbnQncyBjb2RlIGFuZCBhZGQgaXQgdG8gYSBwcm9qZWN0IHRocm91Z2ggdGhlIERldiBMaWJyYXJpZXMgTUNQIHNlcnZlciAoYGRldmxpYnNgKSBhdCBgaHR0cHM6Ly9tY3AuZGV2bGlicmFyaWVzLmNvbS9tY3BgIChIVFRQIHRyYW5zcG9ydCkuIEl0IGFza3MgdGhlIHVzZXIgdG8gc2lnbiBpbiB3aXRoIGEgRGV2IExpYnJhcmllcyBhY2NvdW50IG9uIGZpcnN0IGNvbm5lY3QuCgojIyBPcHRpb25hbAoKLSBbRnVsbCBsaWJyYXJ5IGxpc3RdKGh0dHBzOi8vZGV2bGlicmFyaWVzLmNvbS9sbG1zLWZ1bGwudHh0KTogYWxsIGxpYnJhcmllcyB3aXRoIGxpbmtzLCBjb21wb25lbnQgY291bnRzLCBmcmFtZXdvcmtzIGFuZCBsaWNlbnNlcwotIFtTaXRlbWFwXShodHRwczovL2RldmxpYnJhcmllcy5jb20vc2l0ZW1hcC54bWwpCg==" />
+    <script>
+      (function () {
+        var ORIGIN = "https://devlibraries.com",
+          SITE = "Dev Design Library",
+          head = document.head,
+          HOME = "Dev Design Library: open-source UI components in one place",
+          desc = head.querySelector('meta[name="description"]'),
+          robots = head.querySelector('meta[name="robots"]'),
+          HOME_DESC = "Search 13,500+ UI components from 110 open-source libraries, with source code, previews, licenses and install commands, plus curated design tools, references and resources.",
+          PAGES = {
+            "/libraries": [
+              "UI libraries and components",
+              "Browse and search 13,500+ UI components from 110 open-source libraries, with source code, previews and install commands.",
+            ],
+            "/explore": [
+              "Community packs",
+              "Component packs put together and shared by the Dev Design Library community.",
+            ],
+            "/tools": [
+              "Tools for designers and developers",
+              "A curated directory of design and development tools.",
+            ],
+            "/references": [
+              "Website design references",
+              "Thousands of websites curated as design references, searchable by category.",
+            ],
+            "/resources": [
+              "Design and development resources",
+              "Curated resources for designers and developers.",
+            ],
+            "/skills": [
+              "Agent skills for AI coding assistants",
+              "Agent skills that help AI coding assistants design and build better interfaces.",
+            ],
+            "/bookmarks": ["My bookmarks", HOME_DESC],
+          },
+          libs,
+          canonical = head.querySelector('link[rel="canonical"]');
+        if (!canonical) {
+          canonical = document.createElement("link");
+          canonical.rel = "canonical";
+          head.appendChild(canonical);
+        }
+        var words = function (s) {
+          return s.replace(/[-_]+/g, " ").replace(/\b\w/g, function (c) {
+            return c.toUpperCase();
+          });
+        };
+        var set = function (title, text, url, index) { var S = window.__ddlSsr; if (S && (location.pathname.replace(/\/+$/, "") || "/") === S.path) { document.title = S.title; desc.setAttribute("content", S.desc); canonical.href = S.canon; robots.setAttribute("content", S.robots); return; }
+          document.title = title ? title + " | " + SITE : HOME;
+          desc.setAttribute("content", text || HOME_DESC);
+          canonical.href = ORIGIN + url;
+          robots.setAttribute(
+            "content",
+            index ? "index, follow, max-image-preview:large" : "noindex, follow",
+          );
+        };
+        var apply = function () {
+          var path = location.pathname.replace(/\/+$/, "") || "/",
+            page = PAGES[path],
+            m = /^\/libraries\/([^/]+)(?:\/(.+))?$/.exec(path);
+          if (path === "/" || /^\/(contact|guide|privacy)$/.test(path))
+            return set("", "", "/", true);
+          if (page) return set(page[0], page[1], path, path !== "/bookmarks");
+          if (!m) return set("", "", path, false);
+          var id = decodeURIComponent(m[1]),
+            part = m[2] && decodeURIComponent(m[2]),
+            mine = /^my:/.test(id),
+            show = function (lib) {
+              var name = lib ? lib.name : mine ? "My library" : words(id);
+              if (part) {
+                var title = words(part.split("/").pop());
+                set(
+                  title + " · " + name,
+                  title +
+                    " component from " +
+                    name +
+                    ", with source code, preview and install command.",
+                  path,
+                  !mine && lib !== null,
+                );
+              } else
+                set(
+                  name + " components",
+                  (lib && lib.components ? lib.components + " " : "") +
+                    "UI components from " +
+                    name +
+                    (lib && lib.license && !/^unknown$/i.test(lib.license)
+                      ? " (" + lib.license + " license)"
+                      : "") +
+                    ", with source code, previews and install commands.",
+                  path,
+                  !mine && lib !== null,
+                );
+            };
+          if (mine) return show(undefined);
+          show(libs ? libs[id] || null : undefined);
+          if (libs) return;
+          fetch("/data/catalog/libraries.json")
+            .then(function (r) {
+              return r.json();
+            })
+            .then(function (data) {
+              libs = {};
+              (data.libraries || []).forEach(function (l) {
+                libs[l.id] = l;
+              });
+              if ((location.pathname.replace(/\/+$/, "") || "/") === path) show(libs[id] || null);
+            })
+            .catch(function () {});
+        };
+        try {
+          apply();
+          addEventListener("popstate", function () {
+            try {
+              apply();
+            } catch (e) {}
+          });
+        } catch (e) {}
+      })();
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://devlibraries.com/#organization",
+            "name": "Dev Design Library",
+            "url": "https://devlibraries.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://devlibraries.com/logo.png",
+              "width": 512,
+              "height": 512
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://devlibraries.com/#website",
+            "name": "Dev Design Library",
+            "url": "https://devlibraries.com/",
+            "description": "A searchable catalog of UI components from open-source libraries, plus curated design tools, references and resources.",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://devlibraries.com/#organization" }
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://devlibraries.com/#app",
+            "name": "Dev Design Library",
+            "url": "https://devlibraries.com/",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
+            "description": "Search 13,500+ UI components from 110 open-source libraries, with source code, previews, licenses and install commands.",
+            "image": "https://devlibraries.com/og-image.png",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "publisher": { "@id": "https://devlibraries.com/#organization" }
+          }
+        ]
+      }
+    </script>
+    <link rel="icon" href="/assets/logo-D8rVRh3H.webp" type="image/webp" />
+    <!-- Os tokens escuros do Arc valem com .dark no html: aqui, para a primeira pintura já sair escura. O script troca antes de pintar, como src/parallel/ddl/siteTheme.ts. -->
+    <script>
+      try {
+        if (localStorage.getItem("ddl.theme") === "light") {
+          var h = document.documentElement;
+          h.classList.remove("dark");
+          h.dataset.theme = "light";
+          h.style.colorScheme = "light";
+          h.style.background = "#fff";
+        }
+      } catch (e) {}
+    </script>
+    <script>
+      !(function (t, e) {
+        var o, n, p, r;
+        e.__SV ||
+          (window.posthog && window.posthog.__loaded) ||
+          ((window.posthog = e),
+          (e._i = []),
+          (e.init = function (i, s, a) {
+            function g(t, e) {
+              var o = e.split(".");
+              (2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                (t[e] = function () {
+                  t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                }));
+            }
+            (((p = t.createElement("script")).type = "text/javascript"),
+              (p.crossOrigin = "anonymous"),
+              (p.async = !0),
+              (p.src =
+                s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js"),
+              (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r));
+            var u = e;
+            for (
+              void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                u.people = u.people || [],
+                u.toString = function (t) {
+                  var e = "posthog";
+                  return ("posthog" !== a && (e += "." + a), t || (e += " (stub)"), e);
+                },
+                u.people.toString = function () {
+                  return u.toString(1) + ".people (stub)";
+                },
+                o =
+                  "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId captureTraceFeedback captureTraceMetric".split(
+                    " ",
+                  ),
+                n = 0;
+              n < o.length;
+              n++
+            )
+              g(u, o[n]);
+            e._i.push([i, s, a]);
+          }),
+          (e.__SV = 1));
+      })(document, window.posthog || []);
+    </script>
+    <script type="module" crossorigin src="/assets/index-jQ0sq8ip.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-pP25SEvz.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-Bw-b12Cp.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareSourceCode","@id":"https://devlibraries.com/libraries/reactframe/sidebar#code","name":"Sidebar","description":"A collapsible app sidebar with grouped nav sections, a sliding active-item indicator, badges, an icon-only rail mode with hover tooltips, a user footer and full keyboard navigation.","url":"https://devlibraries.com/libraries/reactframe/sidebar","codeRepository":"https://github.com/AhmetLoca/reactframe-public","license":"https://spdx.org/licenses/MIT.html","runtimePlatform":"React","programmingLanguage":"TypeScript","image":"https://ddl.parallelcanvas.app/covers/reactframe/sidebar.jpg","keywords":"Navigation, Sidebar","isPartOf":{"@type":"SoftwareSourceCode","name":"ReactFrame","url":"https://devlibraries.com/libraries/reactframe"},"isAccessibleForFree":true,"inLanguage":"en","author":{"@type":"Organization","name":"AhmetLoca","url":"https://github.com/AhmetLoca"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://devlibraries.com/"},{"@type":"ListItem","position":2,"name":"Libraries","item":"https://devlibraries.com/libraries"},{"@type":"ListItem","position":3,"name":"ReactFrame","item":"https://devlibraries.com/libraries/reactframe"},{"@type":"ListItem","position":4,"name":"Sidebar","item":"https://devlibraries.com/libraries/reactframe/sidebar"}]}]}</script><style>html.ddl-js #ddl-ssr{display:none}#ddl-ssr{max-width:960px;margin:0 auto;padding:24px;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#d4d4d8}#ddl-ssr a{color:#fafafa}#ddl-ssr img{max-width:100%;height:auto;border-radius:12px}#ddl-ssr dt{font-weight:600;color:#fafafa}#ddl-ssr dd{margin:0 0 8px}#ddl-ssr nav ul{display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0}#ddl-ssr code{font-size:14px}</style><script>document.documentElement.classList.add("ddl-js")</script>
+  </head>
+  <body style="margin: 0">
+    <div id="root"><div id="ddl-ssr"><header><a href="/"><strong>Dev Design Library</strong></a><nav aria-label="Site"><ul><li><a href="/">Home</a></li><li><a href="/libraries">Libraries</a></li><li><a href="/components">Components</a></li><li><a href="/tools">Tools</a></li><li><a href="/references">References</a></li><li><a href="/resources">Resources</a></li><li><a href="/skills">Skills</a></li><li><a href="/explore">Community packs</a></li></ul></nav></header><main><nav aria-label="Breadcrumb" class="crumbs"><a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/libraries">Libraries</a> <span aria-hidden="true">/</span> <a href="/libraries/reactframe">ReactFrame</a> <span aria-hidden="true">/</span> <span aria-current="page">Sidebar</span></nav><article><h1>Sidebar</h1><p>A collapsible app sidebar with grouped nav sections, a sliding active-item indicator, badges, an icon-only rail mode with hover tooltips, a user footer and full keyboard navigation.</p><img src="https://ddl.parallelcanvas.app/covers/reactframe/sidebar.jpg" alt="Sidebar preview" width="640" height="400" loading="lazy" decoding="async"><dl><dt>Library</dt><dd><a href="/libraries/reactframe">ReactFrame</a></dd><dt>Framework</dt><dd>React</dd><dt>Type</dt><dd>component</dd><dt>License</dt><dd>MIT</dd><dt>Dependencies</dt><dd>clsx, motion, tailwind-merge</dd><dt>Install</dt><dd><code>npx shadcn@latest add https://reactframe.com/r/sidebar.json</code></dd><dt>Files</dt><dd><ul><li><code>registry/new-york/sidebar/sidebar.tsx</code></li></ul></dd><dt>Source</dt><dd><a href="https://github.com/AhmetLoca/reactframe-public" rel="noopener" target="_blank">https://github.com/AhmetLoca/reactframe-public</a></dd></dl><h2>Categories</h2><ul><li><a href="/components/navigation">Navigation Components</a></li><li><a href="/components/react/navigation">React Navigation Components</a></li><li><a href="/components/tailwind/navigation">Tailwind CSS Navigation Components</a></li><li><a href="/components/animated/navigation">Animated Navigation Components</a></li><li><a href="/components/sidebar">Sidebar Components</a></li><li><a href="/components/react/sidebar">React Sidebar Components</a></li><li><a href="/components/tailwind/sidebar">Tailwind CSS Sidebar Components</a></li><li><a href="/components/animated/sidebar">Animated Sidebar Components</a></li></ul><h2>More from ReactFrame</h2><ul><li><a href="/libraries/reactframe/2048-game">2048 Game</a></li><li><a href="/libraries/reactframe/accordion">Accordion</a></li><li><a href="/libraries/reactframe/ai-answer-03">AI Answer 03</a></li><li><a href="/libraries/reactframe/ai-asistant">AI Asistant</a></li><li><a href="/libraries/reactframe/ai-dynamic-island-01">AI Dynamic Island 01</a></li><li><a href="/libraries/reactframe/ai-edit-review">AI Edit Review</a></li><li><a href="/libraries/reactframe/ai-image-loader-03">AI Image Loader 03</a></li><li><a href="/libraries/reactframe/ai-voice-01">AI Voice 01</a></li><li><a href="/libraries/reactframe/ai-voice-05">AI Voice 05</a></li><li><a href="/libraries/reactframe/airbnb-reviews">Airbnb Reviews</a></li><li><a href="/libraries/reactframe/alert-toast">Alert Toast</a></li><li><a href="/libraries/reactframe/animated-checkbox">Animated Checkbox</a></li></ul></article></main></div></div>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"7efc3aa360d6400c86b45de0f0cc6d5e","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
+

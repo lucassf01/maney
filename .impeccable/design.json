@@ -1,0 +1,838 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-12T20:50:42.991Z",
+  "title": "Design System: maney",
+  "extensions": {
+    "colorMeta": {
+      "surface": {
+        "role": "neutral",
+        "displayName": "surface",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "sidebar": {
+        "role": "neutral",
+        "displayName": "sidebar",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "subtle": {
+        "role": "neutral",
+        "displayName": "subtle",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "hover": {
+        "role": "neutral",
+        "displayName": "hover",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "text",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "muted",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "border",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "border-hover": {
+        "role": "neutral",
+        "displayName": "border hover",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "green": {
+        "role": "neutral",
+        "displayName": "green",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "red": {
+        "role": "neutral",
+        "displayName": "red",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "focus",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "chart-secondary": {
+        "role": "neutral",
+        "displayName": "chart secondary",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "primary-hover": {
+        "role": "neutral",
+        "displayName": "primary hover",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "nav-active": {
+        "role": "primary",
+        "displayName": "nav active",
+        "tonalRamp": [
+          "oklch(15% 0.04 125)",
+          "oklch(25% 0.06 125)",
+          "oklch(35% 0.08 125)",
+          "oklch(45% 0.12 125)",
+          "oklch(60% 0.16 125)",
+          "oklch(72% 0.18 125)",
+          "#c5f34a",
+          "oklch(95% 0.04 125)"
+        ]
+      },
+      "nav-text": {
+        "role": "neutral",
+        "displayName": "nav text",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "success-text": {
+        "role": "neutral",
+        "displayName": "success text",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "success-surface": {
+        "role": "neutral",
+        "displayName": "success surface",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "danger-text": {
+        "role": "neutral",
+        "displayName": "danger text",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "danger-surface": {
+        "role": "neutral",
+        "displayName": "danger surface",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "warning-text": {
+        "role": "neutral",
+        "displayName": "warning text",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "warning-surface": {
+        "role": "neutral",
+        "displayName": "warning surface",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "pending-surface": {
+        "role": "neutral",
+        "displayName": "pending surface",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "neutral-surface": {
+        "role": "neutral",
+        "displayName": "neutral surface",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "neutral-border": {
+        "role": "neutral",
+        "displayName": "neutral border",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "attention-text": {
+        "role": "neutral",
+        "displayName": "attention text",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "attention-surface": {
+        "role": "neutral",
+        "displayName": "attention surface",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "attention-border": {
+        "role": "neutral",
+        "displayName": "attention border",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "danger-button-surface": {
+        "role": "neutral",
+        "displayName": "danger button surface",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "danger-button-border": {
+        "role": "neutral",
+        "displayName": "danger button border",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "selection-surface": {
+        "role": "neutral",
+        "displayName": "selection surface",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "batch-surface": {
+        "role": "neutral",
+        "displayName": "batch surface",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "batch-border": {
+        "role": "neutral",
+        "displayName": "batch border",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "canvas",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "brand": {
+        "role": "primary",
+        "displayName": "brand",
+        "tonalRamp": [
+          "oklch(15% 0.04 125)",
+          "oklch(25% 0.06 125)",
+          "oklch(35% 0.08 125)",
+          "oklch(45% 0.12 125)",
+          "oklch(60% 0.16 125)",
+          "oklch(72% 0.18 125)",
+          "#c5f34a",
+          "oklch(95% 0.04 125)"
+        ]
+      },
+      "brand-hover": {
+        "role": "primary",
+        "displayName": "brand hover",
+        "tonalRamp": [
+          "oklch(15% 0.04 125)",
+          "oklch(25% 0.06 125)",
+          "oklch(35% 0.08 125)",
+          "oklch(45% 0.12 125)",
+          "oklch(60% 0.16 125)",
+          "oklch(72% 0.18 125)",
+          "#c5f34a",
+          "oklch(95% 0.04 125)"
+        ]
+      },
+      "brand-ink": {
+        "role": "primary",
+        "displayName": "brand ink",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "brand-soft": {
+        "role": "primary",
+        "displayName": "brand soft",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "receivable": {
+        "role": "neutral",
+        "displayName": "receivable",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "receivable-soft": {
+        "role": "neutral",
+        "displayName": "receivable soft",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "payable": {
+        "role": "neutral",
+        "displayName": "payable",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "payable-soft": {
+        "role": "neutral",
+        "displayName": "payable soft",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      },
+      "chart-primary": {
+        "role": "neutral",
+        "displayName": "chart primary",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#333333",
+          "#595959",
+          "#737373",
+          "#999999",
+          "#b8b8b8",
+          "#d6d6d6",
+          "#f2f2f2"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Panel headings."
+      },
+      "sheet-title": {
+        "displayName": "Sheet Title",
+        "purpose": "Task sheet headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Global interface reading baseline."
+      },
+      "body-small": {
+        "displayName": "Body Small",
+        "purpose": "Table rows and detailed metadata."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Visible form labels."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Compact action text."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Helper and supporting text."
+      },
+      "table-head": {
+        "displayName": "Table Head",
+        "purpose": "Quiet table column headers."
+      },
+      "metric": {
+        "displayName": "Metric",
+        "purpose": "Financial summary amounts with tabular numerals."
+      },
+      "entry-amount": {
+        "displayName": "Entry Amount",
+        "purpose": "Prominent entry-detail amount with tabular numerals."
+      },
+      "badge": {
+        "displayName": "Badge",
+        "purpose": "Short status labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "selected-segment",
+        "value": "0 1px 2px #00000005",
+        "purpose": "Small selected-state separation inside segmented controls."
+      },
+      {
+        "name": "chart-tooltip",
+        "value": "0 8px 25px #00000014",
+        "purpose": "Transient chart values."
+      },
+      {
+        "name": "sheet",
+        "value": "-12px 0 40px #0000000a",
+        "purpose": "Right-edge panel separation."
+      },
+      {
+        "name": "toast",
+        "value": "0 5px 30px #00000020",
+        "purpose": "Transient confirmation and error feedback."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-state",
+        "value": "120ms ease",
+        "purpose": "Background and border changes on compact controls."
+      },
+      {
+        "name": "control-press",
+        "value": "120ms ease-out; transform: scale(0.98)",
+        "purpose": "Small button and icon-button press feedback."
+      },
+      {
+        "name": "sheet-enter",
+        "value": "220ms cubic-bezier(0.23, 1, 0.32, 1); translateX(24px) to translateX(0); opacity 0.5 to 1",
+        "purpose": "A short horizontal settle on opening a task sheet."
+      },
+      {
+        "name": "loading",
+        "value": "1.2s ease-in-out infinite alternate; opacity 1 to 0.35",
+        "purpose": "Startup skeletons."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none; transition-duration: 0.01ms; scroll-behavior: auto",
+        "purpose": "Applied when prefers-reduced-motion is reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "large-desktop-min",
+        "value": "1600px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1250px"
+      },
+      {
+        "name": "intermediate-max",
+        "value": "1050px"
+      },
+      {
+        "name": "mobile-navigation-max",
+        "value": "800px"
+      },
+      {
+        "name": "narrow-mobile-max",
+        "value": "480px"
+      },
+      {
+        "name": "upcoming-compact-max",
+        "value": "1100px"
+      },
+      {
+        "name": "upcoming-stack-max",
+        "value": "950px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The lime primary action for creating or saving a financial record.",
+      "html": "<button class=\"ds-primary\">Novo lançamento</button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid var(--border, #e5e5e5);background:var(--surface, #ffffff);color:var(--text, #1f1f1f);border-radius:6px;min-height:36px;padding:7px 12px;font-family:var(--font-geist-sans, Arial),sans-serif;font-size:13px;font-weight:500;line-height:20px;white-space:nowrap;cursor:pointer;transition:background-color 120ms ease,border-color 120ms ease,transform 120ms ease-out;background:var(--brand, #dddddd);border-color:var(--brand, #dddddd);color:var(--brand-ink, #2c2c2c)}.ds-primary:hover{background:#333}.ds-primary:active{transform:scale(.98)}.ds-primary:focus-visible{outline:2px solid var(--focus, #6c6c6c);outline-offset:3px;}.ds-primary:disabled{opacity:.48;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-primary{transition-duration:.01ms}}.ds-primary{background:#c5f34a;border-color:#c5f34a;color:#171717}.ds-primary:hover{background:#b4e331}"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A bordered companion action for filtering, export or cancellation.",
+      "html": "<button class=\"ds-secondary\">Cancelar</button>",
+      "css": ".ds-secondary{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid var(--border, #e5e5e5);background:var(--surface, #ffffff);color:var(--text, #1f1f1f);border-radius:6px;min-height:36px;padding:7px 12px;font-family:var(--font-geist-sans, Arial),sans-serif;font-size:13px;font-weight:500;line-height:20px;white-space:nowrap;cursor:pointer;transition:background-color 120ms ease,border-color 120ms ease,transform 120ms ease-out;}.ds-secondary:hover{background:var(--subtle, #f7f7f7);border-color:var(--border-hover, #c3c3c3)}.ds-secondary:active{transform:scale(.98)}.ds-secondary:focus-visible{outline:2px solid var(--focus, #6c6c6c);outline-offset:3px;}.ds-secondary:disabled{opacity:.48;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-secondary{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Destructive button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "The pale-red confirmation action for destructive operations.",
+      "html": "<button class=\"ds-danger\">Confirmar restauração</button>",
+      "css": ".ds-danger{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid var(--border, #e5e5e5);background:var(--surface, #ffffff);color:var(--text, #1f1f1f);border-radius:6px;min-height:36px;padding:7px 12px;font-family:var(--font-geist-sans, Arial),sans-serif;font-size:13px;font-weight:500;line-height:20px;white-space:nowrap;cursor:pointer;transition:background-color 120ms ease,border-color 120ms ease,transform 120ms ease-out;color:var(--red, #5b5b5b);border-color:#d2d2d2;background:#f9f9f9}.ds-danger:hover{border-color:#d2d2d2;background:#f9f9f9}.ds-danger:active{transform:scale(.98)}.ds-danger:focus-visible{outline:2px solid var(--focus, #6c6c6c);outline-offset:3px;}.ds-danger:disabled{opacity:.48;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-danger{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Text action",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "A quiet contextual action with an underline on hover.",
+      "html": "<button class=\"ds-text\">Conferir <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></button>",
+      "css": ".ds-text{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:none;border:0;padding:4px 0;color:var(--text, #1f1f1f);font-family:var(--font-geist-sans, Arial),sans-serif;font-weight:500;font-size:13px;line-height:1.5;white-space:nowrap;cursor:pointer}.ds-text:hover{text-decoration:underline;text-underline-offset:4px}.ds-text:focus-visible{outline:2px solid var(--focus, #6c6c6c);outline-offset:3px;}.ds-text:disabled{opacity:.48;cursor:not-allowed}"
+    },
+    {
+      "name": "Labeled input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "A normal-weight field with associated label, hint and a visible keyboard outline.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-label\">Descrição</span><input class=\"ds-input\" type=\"text\" placeholder=\"Ex.: Mensalidade de marketing\" aria-describedby=\"ds-input-hint\"><small class=\"ds-hint\" id=\"ds-input-hint\">Identifique este lançamento.</small></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:7px;min-width:0;font-family:var(--font-geist-sans, Arial),sans-serif;color:var(--text, #1f1f1f)}.ds-label{font-size:12px;font-weight:500;line-height:1.5}.ds-input{border:1px solid var(--border, #e5e5e5);border-radius:6px;background:var(--surface, #ffffff);color:var(--text, #1f1f1f);padding:8px 10px;min-height:38px;font:400 13px/1.5 var(--font-geist-sans, Arial),sans-serif;max-width:100%;transition:border-color 120ms ease}.ds-input::placeholder{color:#767676}.ds-input:hover{border-color:var(--border-hover, #c3c3c3)}.ds-input:focus-visible{outline:2px solid var(--focus, #6c6c6c);outline-offset:1px}.ds-input[readonly]{background:var(--subtle, #f7f7f7);color:var(--muted, #6d6d6d)}.ds-hint{color:var(--muted, #6d6d6d);font-size:11px;line-height:1.6}@media(prefers-reduced-motion:reduce){.ds-input{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Sidebar navigation",
+      "kind": "nav",
+      "refersTo": "nav-item",
+      "description": "The same grouped financial destinations appear in the desktop sidebar and mobile sheet.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navegação principal\"><a class=\"ds-nav-item ds-nav-active\" href=\"/\" aria-current=\"page\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z\"/></svg>Visão geral</a><a class=\"ds-nav-item\" href=\"/pagar\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg>Contas a pagar</a></nav>",
+      "css": ".ds-nav{background:var(--sidebar, #f7f7f7);padding:14px;font-family:var(--font-geist-sans, Arial),sans-serif;}.ds-nav-item{display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:6px;margin:2px 0;color:#666;min-height:38px;font-size:12.5px;line-height:1.5;font-weight:450;text-decoration:none}.ds-nav-item:hover{background:var(--hover, #f0f0f0);color:var(--text, #1f1f1f)}.ds-nav-active{color:var(--text, #1f1f1f);background:#eaeaea;font-weight:550}.ds-nav-item:focus-visible{outline:2px solid var(--focus, #6c6c6c);outline-offset:3px;}"
+    },
+    {
+      "name": "Financial status badges",
+      "kind": "chip",
+      "refersTo": "badge-success",
+      "description": "Settled, overdue, partial, open and cancelled states pair a short label with color.",
+      "html": "<div class=\"ds-badges\"><span class=\"ds-badge ds-success\"><span class=\"ds-dot\"></span>Recebido</span><span class=\"ds-badge ds-overdue\"><span class=\"ds-dot\"></span>Atrasado</span><span class=\"ds-badge ds-partial\"><span class=\"ds-dot\"></span>Parcial</span><span class=\"ds-badge ds-pending\"><span class=\"ds-dot\"></span>Em aberto</span><span class=\"ds-badge ds-neutral\"><span class=\"ds-dot\"></span>Cancelado</span></div>",
+      "css": ".ds-badges{display:flex;flex-wrap:wrap;gap:8px}.ds-badge{display:inline-flex;align-items:center;gap:5px;border-radius:5px;padding:3px 7px;font-family:var(--font-geist-sans, Arial),sans-serif;font-size:10px;line-height:16px;font-weight:500;white-space:nowrap}.ds-dot{height:4px;width:4px;border-radius:50%;background:currentColor}.ds-success{color:#5c5c5c;background:#f4f4f4}.ds-overdue{color:#4a4a4a;background:#f3f3f3}.ds-partial{color:#6a6a6a;background:#f5f5f5}.ds-pending{color:#666;background:#f2f2f2}.ds-neutral{color:#666;background:#f4f4f4;border:1px solid #e8e8e8;padding:2px 7px}"
+    },
+    {
+      "name": "Flat panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "A flat bordered container for charts, registries and account summaries.",
+      "html": "<section class=\"ds-panel\"><div class=\"ds-panel-heading\"><h2 class=\"ds-panel-title\">Suas contas</h2><p class=\"ds-panel-copy\">Saldos atualizados até hoje.</p></div><div class=\"ds-panel-content\"><span class=\"ds-account-name\">Conta financeira</span><strong class=\"ds-account-value\">R$ 31.759,00</strong></div></section>",
+      "css": ".ds-panel{border:1px solid var(--border, #e5e5e5);border-radius:9px;background:var(--surface, #ffffff);min-width:0;overflow:hidden;color:var(--text, #1f1f1f);font-family:var(--font-geist-sans, Arial),sans-serif;}.ds-panel-heading{padding:20px 23px 0}.ds-panel-title{margin:0;font-size:15px;line-height:1.5;letter-spacing:-.015em;font-weight:600}.ds-panel-copy{font-size:12px;line-height:1.6;color:var(--muted, #6d6d6d);margin:5px 0 0}.ds-panel-content{padding:22px;display:flex;align-items:center;justify-content:space-between;gap:10px}.ds-account-name{font-size:11px;font-weight:500}.ds-account-value{font-size:12px;font-weight:550;font-variant-numeric:tabular-nums;white-space:nowrap}"
+    },
+    {
+      "name": "Financial table",
+      "kind": "custom",
+      "refersTo": "financial-table",
+      "description": "Financial rows preserve descriptions, status and aligned amounts inside a dedicated scroller.",
+      "html": "<div class=\"ds-table-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Lançamentos\"><table class=\"ds-table\"><thead><tr><th>Descrição</th><th>Vencimento</th><th class=\"ds-number\">Valor</th></tr></thead><tbody><tr><td><button class=\"ds-row-title\">Mensalidade de marketing</button><span class=\"ds-cell-sub\">Exemplo de demonstração</span></td><td>15 de nov</td><td class=\"ds-number ds-amount\">R$ 5.800,00</td></tr><tr><td><button class=\"ds-row-title\">Infraestrutura</button><span class=\"ds-cell-sub\">Exemplo de demonstração</span></td><td>20 de nov</td><td class=\"ds-number ds-amount\">R$ 125,00</td></tr></tbody></table></div>",
+      "css": ".ds-table-scroll{width:100%;overflow-x:auto;border:1px solid var(--border, #e5e5e5);border-radius:9px}.ds-table{width:100%;border-collapse:collapse;text-align:left;font-family:var(--font-geist-sans, Arial),sans-serif;color:var(--text, #1f1f1f);background:var(--surface, #ffffff)}.ds-table th{font-size:11px;font-weight:450;color:var(--muted, #6d6d6d);height:39px;background:var(--subtle, #f7f7f7);border-bottom:1px solid var(--border, #e5e5e5);padding:8px 17px;white-space:nowrap}.ds-table td{padding:15px 17px;border-bottom:1px solid var(--border, #e5e5e5);font-size:12px;height:66px}.ds-table tbody tr:last-child td{border-bottom:0}.ds-table tr:hover td{background:var(--subtle, #f7f7f7)}.ds-table td:first-child,.ds-table th:first-child{padding-left:23px}.ds-row-title{background:none;border:0;padding:0;text-align:left;font:500 12px/1.5 var(--font-geist-sans, Arial),sans-serif;color:var(--text, #1f1f1f);cursor:pointer}.ds-row-title:hover{text-decoration:underline;text-underline-offset:3px}.ds-row-title:focus-visible,.ds-table-scroll:focus-visible{outline:2px solid var(--focus, #6c6c6c);outline-offset:3px;}.ds-cell-sub{display:block;color:var(--muted, #6d6d6d);font-size:10px;line-height:1.5;margin-top:3px}.ds-number{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.ds-amount{font-weight:500}@media(max-width:800px){.ds-table{min-width:760px}}"
+    },
+    {
+      "name": "Context-preserving side panel",
+      "kind": "custom",
+      "refersTo": "sheet",
+      "description": "Structural preview of the right-edge task sheet. The app's native dialog supplies modal focus, Escape and focus restoration; this standalone snippet previews its visual shell.",
+      "html": "<section class=\"ds-sheet\" aria-labelledby=\"ds-sheet-title\"><header class=\"ds-sheet-head\"><div><h2 id=\"ds-sheet-title\" class=\"ds-sheet-title\">Detalhes do lançamento</h2><p class=\"ds-sheet-copy\">Informações e histórico financeiro.</p></div><button class=\"ds-sheet-close\" aria-label=\"Fechar painel\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"m18 6-12 12M6 6l12 12\"/></svg></button></header><div class=\"ds-sheet-content\"><p class=\"ds-sheet-copy\">Valor total</p><strong class=\"ds-entry-amount\">R$ 5.800,00</strong></div></section>",
+      "css": ".ds-sheet{width:550px;max-width:100%;background:var(--surface, #ffffff);color:var(--text, #1f1f1f);border-left:1px solid var(--border, #e5e5e5);box-shadow:-12px 0 40px #0000000a;overflow-y:auto;font-family:var(--font-geist-sans, Arial),sans-serif;}.ds-sheet-head{position:sticky;top:0;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:25px 27px 21px;border-bottom:1px solid var(--border, #e5e5e5);background:var(--surface, #ffffff)}.ds-sheet-title{margin:0;font-size:18px;font-weight:600;letter-spacing:-.4px;line-height:1.6}.ds-sheet-copy{font-size:12px;color:var(--muted, #6d6d6d);line-height:1.6;margin:5px 0 0}.ds-sheet-content{padding:26px 27px 32px}.ds-sheet-close{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;padding:0;border:1px solid transparent;background:transparent;border-radius:6px;color:inherit;cursor:pointer;transition:background-color 120ms ease,transform 120ms ease-out}.ds-sheet-close:hover{background:var(--hover, #f0f0f0)}.ds-sheet-close:active{transform:scale(.98)}.ds-sheet-close:focus-visible{outline:2px solid var(--focus, #6c6c6c);outline-offset:3px;}.ds-entry-amount{display:block;font-size:34px;font-weight:550;letter-spacing:-1px;line-height:1.3;font-variant-numeric:tabular-nums;white-space:nowrap}@media(max-width:480px){.ds-sheet{width:100%;border-left:0}.ds-sheet-head{padding:19px 20px 17px}.ds-sheet-title{font-size:17px}.ds-sheet-content{padding:22px 20px 28px}.ds-entry-amount{font-size:32px}}@media(prefers-reduced-motion:reduce){.ds-sheet-close{transition-duration:.01ms}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Clear Ledger",
+    "overview": "**North star: The Clear Ledger.**\n\nmaney is a desktop-first financial workspace using Geist foundations. Surfaces are strictly white and neutral light gray, with black/gray typography. Lime green is the only interface accent, reserved for primary actions, the active navigation item, and important overdue notices. Broad financial cards and page backgrounds stay neutral.\n\nThe user-supplied maney logo novo.png is the wordmark, and favicon.png is the compact mark and source of the browser/app icons. Preserve the artwork and its proportions. The gradient inside this supplied artwork is not a general UI treatment.\n\nPage subtitles and the company switcher remain removed. The overview uses equal upcoming-payable and upcoming-receivable panels, with overdue accounts below. Local records and layout preference keep their existing storage identifiers so the rebrand preserves data. The latest overview uses a lime available-balance card, dark upcoming-panel headers, an emphasized overdue reminder and no separate overdue table. ReactFrame Sidebar source provides the navigation. A shared custom date-range popover filters financial views, while current-week due dates use weekday names.",
+    "keyCharacteristics": [
+      "Neutral white and light-gray surfaces.",
+      "Only lime green for relevant interface highlights.",
+      "User-supplied maney logo and icon.",
+      "Clear financial labels, icons and tabular values.",
+      "Responsive, collapsible navigation and context-preserving sheets.",
+      "Adapted ReactFrame sidebar with controlled rail, tooltips and keyboard navigation.",
+      "Inclusive custom date ranges shared by financial views.",
+      "Canvas-gray top bar shares the centered 1600px content container and responsive gutters."
+    ],
+    "rules": [
+      {
+        "name": "Relevant Highlights",
+        "body": "Reserve lime for primary actions, active selection and important notices; all financial surfaces and values stay neutral.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Use the supplied maney artwork.",
+      "Keep white/gray surfaces and explicit financial status labels.",
+      "Preserve existing local records."
+    ],
+    "donts": [
+      "Do not use other accent colors or pale green page backgrounds.",
+      "Do not color every card or replace the supplied logo."
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "source": "User-supplied updated artwork in the project root",
+  "files": {
+    "maney-logo.png": "../../maney logo novo.png; unchanged artwork, optimized PNG encoding",
+    "maney-icon.png": "../../favicon.png; transparent outer padding trimmed and resized to128px",
+    "../../src/app/icon.png": "favicon.png; transparent outer padding trimmed and resized to256px",
+    "../../src/app/apple-icon.png": "favicon.png; transparent outer padding trimmed and resized to180px",
+    "../../src/app/favicon.ico": "favicon.png; trimmed and resized to32px, RGBA PNG in ICO container"
+  }
+}

@@ -1,0 +1,24 @@
+:root {
+  --surface: #ffffff;
+  --canvas: #f7f7f7;
+  --sidebar: #ffffff;
+  --subtle: #fafafa;
+  --hover: #f2f2f2;
+  --text: #171717;
+  --muted: #666666;
+  --border: #e5e5e5;
+  --border-hover: #c9c9c9;
+  --brand: #c5f34a;
+  --brand-hover: #b4e331;
+  --brand-ink: #171717;
+  --brand-soft: #f3f3f3;
+  --green: #171717;
+  --red: #171717;
+  --focus: #171717;
+  --chart-primary: #333333;
+  --chart-secondary: #a3a3a3;
+  --receivable: #171717;
+  --receivable-soft: #ffffff;
+  --payable: #171717;
+  --payable-soft: #ffffff;
+}

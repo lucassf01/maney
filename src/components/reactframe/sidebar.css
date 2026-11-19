@@ -1,0 +1,230 @@
+.rf-sidebar {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 100%;
+  color: #171717;
+}
+.rf-header {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.rf-brand {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.rf-brand .brand {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.rf-collapse,
+.rf-item,
+.rf-user {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  outline: none;
+  text-align: left;
+}
+.rf-collapse {
+  flex-shrink: 0;
+  justify-content: center;
+  border-radius: 8px;
+}
+.rf-collapse:focus-visible,
+.rf-item:focus-visible,
+.rf-user:focus-visible {
+  outline: 2px solid #171717;
+  outline-offset: -2px;
+}
+.rf-item:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+.rf-item-icon {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+.rf-item-icon > svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 1.7;
+}
+.rf-active-pill {
+  position: absolute;
+  inset: 0;
+}
+.rf-item-label {
+  position: relative;
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+.rf-item-badge {
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 999px;
+  padding: 1px 6px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.rf-rail-badge {
+  position: absolute;
+  border-radius: 50%;
+}
+.rf-nav {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.rf-section {
+  display: flex;
+  flex-direction: column;
+}
+.rf-section-label {
+  overflow: hidden;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.rf-user-wrap {
+  flex-shrink: 0;
+}
+.rf-user-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  font-weight: 600;
+}
+.rf-user-copy {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.rf-user-name,
+.rf-user-subtitle {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+.rf-user-name {
+  font-weight: 600;
+}
+.rf-tooltip-anchor {
+  display: block;
+  width: 100%;
+}
+.rf-tooltip {
+  position: fixed;
+  z-index: 9999;
+  white-space: nowrap;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-weight: 500;
+}
+.rf-footer {
+  padding: 10px 18px;
+  font-size: 10px;
+  color: #666;
+}
+.rf-local-notice {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+.rf-local-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #777;
+  flex-shrink: 0;
+}
+.sidebar-collapsed .sidebar .rf-footer {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+.sidebar-collapsed .sidebar .rf-local-notice > span:last-child {
+  display: none;
+}
+.app-shell {
+  --sidebar-width: 260px;
+}
+.sidebar.sidebar-reactframe {
+  padding: 12px;
+  overflow: visible;
+  background: var(--canvas);
+  border: 0;
+}
+.sidebar-reactframe .rf-sidebar {
+  height: calc(100dvh - 24px) !important;
+}
+.sidebar-reactframe .brand-full {
+  width: 128px;
+}
+.sidebar-collapsed .sidebar-reactframe .brand-mini {
+  display: block;
+  width: 30px;
+}
+.sidebar-collapsed .sidebar-reactframe .brand-full {
+  display: none;
+}
+.mobile-nav.mobile-reactframe {
+  padding: 12px;
+  max-width: 290px;
+  background: var(--canvas);
+}
+.mobile-reactframe .rf-sidebar {
+  max-width: 100%;
+  height: calc(100dvh - 24px) !important;
+}
+.mobile-reactframe .mobile-close {
+  z-index: 2;
+  right: 18px;
+  top: 23px;
+}
+.mobile-reactframe .rf-header {
+  padding-right: 40px !important;
+}
+.mobile-reactframe .brand-full {
+  display: block;
+  width: 128px;
+}
+.mobile-reactframe .brand-mini {
+  display: none !important;
+}
+@media (min-width: 801px) {
+  .app-shell.sidebar-collapsed {
+    --sidebar-width: 88px;
+  }
+  .sidebar-collapsed .sidebar.sidebar-reactframe {
+    padding: 12px;
+  }
+}
+@media (max-width: 800px) {
+  .sidebar.sidebar-reactframe {
+    display: none;
+  }
+}
