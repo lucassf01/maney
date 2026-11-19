@@ -32,56 +32,6 @@ export async function loadData(): Promise<FinanceData | null> {
     db.close();
   }
 }
-export async function saveData(data: FinanceData) {
-  const db = await database();
-  try {
-    await new Promise<void>((resolve, reject) => {
-      const tx = db.transaction("workspace", "readwrite");
-      const store = tx.objectStore("workspace");
-      const read = store.get("current");
-      read.onsuccess = () => {
-        if (read.result) store.put(read.result, "previous");
-        store.put(data, "current");
-      };
-      tx.oncomplete = () => resolve();
-      tx.onerror = () => reject(tx.error);
-      tx.onabort = () => reject(tx.error);
-    });
-  } finally {
-    db.close();
-  }
-}
-export async function replaceData(data: FinanceData) {
-  const db = await database();
-  try {
-    await new Promise<void>((resolve, reject) => {
-      const tx = db.transaction("workspace", "readwrite");
-      const store = tx.objectStore("workspace");
-      store.put(data, "current");
-      store.delete("previous");
-      tx.oncomplete = () => resolve();
-      tx.onerror = () => reject(tx.error);
-      tx.onabort = () => reject(tx.error);
-    });
-  } finally {
-    db.close();
-  }
-}
-export async function previousBackup(): Promise<FinanceData | null> {
-  const db = await database();
-  try {
-    return await new Promise((resolve, reject) => {
-      const r = db
-        .transaction("workspace")
-        .objectStore("workspace")
-        .get("previous");
-      r.onsuccess = () => resolve(r.result ?? null);
-      r.onerror = () => reject(r.error);
-    });
-  } finally {
-    db.close();
-  }
-}
 export function download(name: string, contents: string, type = "text/plain") {
   const url = URL.createObjectURL(new Blob([contents], { type }));
   const a = document.createElement("a");

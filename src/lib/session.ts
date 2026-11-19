@@ -36,6 +36,7 @@ export const getSession = cache(async () => {
     (value): value is string => typeof value === "string" && !!value.trim(),
   );
   const profile: Profile = {
+    id: claims.sub,
     name:
       name?.trim() ||
       (email === "noordshopbr@gmail.com" ? "Noord Shop" : email),

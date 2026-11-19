@@ -35,21 +35,23 @@ Para rodar `pnpm exec playwright test`, mantenha o app em execução com um proj
 - Registro de transferências entre contas próprias, sem execução bancária.
 - CSV com mapeamento de colunas, prévia, validação e detecção de reimportação. Não há conciliação bancária.
 - Importação de exportações do Bling: detecta o layout de contas a receber pagas, ignora a linha de total, faz correspondências de clientes, categorias e contas financeiras e registra os recebimentos no Maney.
-- Backup JSON completo, restauração validada e uma cópia local anterior automática.
+- Sincronização de lançamentos, cadastros e preferências entre dispositivos com a mesma conta.
+- Backup JSON completo, restauração validada e uma cópia automática da versão anterior.
 
 ## Persistência e limites desta versão
 
-O Supabase autentica a conta. Os lançamentos ficam em **IndexedDB neste navegador e origem**. Para levar lançamentos entre endereços ou dispositivos, exporte e restaure um backup JSON em Configurações. O JSON inclui anexos, baixas e metadados. O CSV é uma extração para análise.
+O Supabase autentica a conta e armazena os dados financeiros com acesso restrito ao titular. O Maney lê a versão atual ao abrir, ao voltar à janela e periodicamente enquanto está visível. Uma gravação baseada em uma versão anterior é recusada para preservar as alterações de outro dispositivo.
+
+No primeiro acesso da conta original, o Maney copia os dados do navegador se o workspace ainda estiver vazio na nuvem. A base antiga do navegador é preservada. Em Configurações é possível baixar o backup JSON, que inclui anexos, baixas e metadados. Restaurar um backup substitui a base da conta em todos os dispositivos, com a versão anterior disponível para download após a gravação.
 
 Valores são inteiros em centavos. Competência alimenta a DRE; pagamentos alimentam o caixa. Aportes, empréstimos e distribuição de lucros podem ser classificados em categorias fora da DRE. Não há cálculo tributário automático, emissão fiscal, cobrança bancária nem rateio de despesas por cliente. A DRE é gerencial e depende da classificação correta dos lançamentos.
 
 ## Supabase e Vercel
 
 1. No Supabase, cadastre a conta em **Authentication → Users** e desative o cadastro público em um projeto de uso individual.
-2. Na Vercel, configure `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` no ambiente Production. Faça um novo deploy para aplicar as variáveis.
-3. Abra a URL publicada em uma janela anônima e confirme que o painel exige login.
-
-A migração `supabase/migrations/202611120001_workspace.sql` prepara a futura sincronização dos lançamentos. O login usa somente o Supabase Auth.
+2. Aplique as migrações em `supabase/migrations` antes do deploy. Elas criam o workspace com Row Level Security, controle de versão e cópia anterior.
+3. Na Vercel, configure `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` no ambiente Production. Faça um novo deploy para aplicar as variáveis.
+4. Abra a URL publicada em uma janela anônima e confirme que o painel exige login.
 
 Brand update: use the supplied `maney logo novo.png` and `favicon.png`. The interface uses white and neutral light-gray surfaces; lime is the only accent and is reserved for relevant actions and selection. Financial amounts and ordinary states stay neutral and retain explicit labels/icons. Existing browser database and sidebar preference identifiers are preserved for compatibility.
 

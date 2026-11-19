@@ -27,12 +27,12 @@ import {
   previewBlingImport,
   type BlingImportMapping,
 } from "@/lib/bling-import";
-import { backup, previousBackup } from "@/lib/storage";
+import { backup } from "@/lib/storage";
 import { useFinance } from "./provider";
 import { Field, FormError, PageHead } from "./ui";
 
 export function Settings() {
-  const { data, update, busy, notify } = useFinance(),
+  const { data, update, busy, notify, previousBackup } = useFinance(),
     [tab, setTab] = useState("general"),
     [rows, setRows] = useState<string[][] | null>(null),
     [mapping, setMapping] = useState<Record<string, number>>({}),
@@ -153,7 +153,11 @@ export function Settings() {
       </div>
       {tab === "general" ? (
         <div className="settings-layout">
-          <form onSubmit={saveSettings} className="panel settings-panel">
+          <form
+            key={JSON.stringify(data.settings)}
+            onSubmit={saveSettings}
+            className="panel settings-panel"
+          >
             <div className="panel-heading">
               <h2>Seu negócio</h2>
             </div>
@@ -195,17 +199,12 @@ export function Settings() {
           <aside className="settings-aside">
             <div className="section-heading">
               <HardDrive size={19} />
-              <span className="badge neutral">Versão local</span>
+              <span className="badge neutral">Dados na nuvem</span>
             </div>
-            <h3>Seu financeiro neste navegador</h3>
+            <h3>Sincronização entre dispositivos</h3>
             <p>
-              Esta versão salva as alterações no armazenamento local do
-              navegador.
-            </p>
-            <p>
-              Os dados permanecem ao recarregar a página, mas não são
-              sincronizados entre dispositivos. Exporte um backup para guardar
-              uma cópia fora do navegador.
+              Entre com a mesma conta para acessar seus dados em outro
+              dispositivo.
             </p>
             <div className="aside-divider" />
             <ShieldCheck size={19} />
@@ -253,16 +252,19 @@ export function Settings() {
                 <div>
                   <h3>Cópia automática anterior</h3>
                   <p>
-                    Uma versão local anterior é guardada a cada gravação
-                    bem-sucedida.
+                    A última versão é guardada a cada gravação bem-sucedida.
                   </p>
                 </div>
                 <button
                   className="button"
                   onClick={async () => {
-                    const previous = await previousBackup();
-                    if (previous) backup(previous);
-                    else notify("Ainda não existe uma cópia anterior.");
+                    try {
+                      const previous = await previousBackup();
+                      if (previous) backup(previous);
+                      else notify("Ainda não existe uma cópia anterior.");
+                    } catch (failure) {
+                      notify((failure as Error).message, true);
+                    }
                   }}
                 >
                   <RotateCcw size={15} />
@@ -678,7 +680,8 @@ export function Settings() {
                     <h3>Confirmar restauração do backup</h3>
                     <p>
                       {`${restore.entries.length} lançamento(s), ${restore.accounts.length} conta(s).`}{" "}
-                      Baixe uma cópia antes de continuar.
+                      Este backup substituirá os dados da sua conta em todos os
+                      dispositivos.
                     </p>
                     <div className="inline-actions">
                       <button className="button" onClick={() => backup(data)}>

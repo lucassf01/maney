@@ -156,10 +156,10 @@ export function Workspace({
       footer={
         <div
           className="rf-local-notice"
-          title="Ambiente local · Dados neste navegador"
+          title="Dados na nuvem · Acesse com a mesma conta"
         >
           <span className="rf-local-dot" />
-          <span>Ambiente local · Dados neste navegador</span>
+          <span>Dados na nuvem</span>
         </div>
       }
       user={{
@@ -279,7 +279,7 @@ export function Workspace({
             <span>
               maney<span className="muted"> · Seu financeiro, em ordem.</span>
             </span>
-            <span>Dados locais · BRL</span>
+            <span>Dados na nuvem · BRL</span>
           </footer>
         </main>
       </div>

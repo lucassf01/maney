@@ -6,6 +6,14 @@ export default async function WorkspaceLayout({
 }: {
   children: React.ReactNode;
 }) {
-  await requireProfile();
-  return <Provider>{children}</Provider>;
+  const profile = await requireProfile();
+  return (
+    <Provider
+      key={profile.id}
+      userId={profile.id}
+      allowLegacyImport={profile.email === "noordshopbr@gmail.com"}
+    >
+      {children}
+    </Provider>
+  );
 }

@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Vercel and Supabase are user-selected. Next.js App Router, React and TypeScript implement the responsive web app. Initial local mode uses IndexedDB for durable demo data; Supabase is the target for authenticated production persistence.
+Vercel and Supabase are user-selected. Next.js App Router, React and TypeScript implement the responsive web app. Supabase stores financial data for the authenticated account across devices.
 
 ## Users
 
@@ -28,7 +28,7 @@ Use Vercel Geist design system: https://vercel.com/geist/introduction. The confi
 
 ## Evidence on Hand
 
-Use an empty workspace initially. A real Bling export for paid receivables is available as the first import layout. Supabase Auth verifies the session on the server. Financial records live in IndexedDB per browser and origin.
+Use an empty workspace initially. A real Bling export for paid receivables is available as the first import layout. Supabase Auth verifies the session on the server. The existing IndexedDB workspace can seed the cloud workspace for the original account.
 
 ## Product Principles
 
